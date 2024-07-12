@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: descuento
+  cloud:
+    config:
+      enabled: true
+      uri: http://config-server-service:8081
+  datasource:
+    url: jdbc:postgresql://db-list-repair-service:5433/db-descuento
+    username: postgres
+    password: isilinda
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
