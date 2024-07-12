@@ -15,11 +15,11 @@ public class DescuentoService {
     @Autowired
     RestTemplate restTemplate;
 
-    public ArrayList<Descuento> getRepairsList() {
+    public ArrayList<Descuento> getDescuento() {
         return (ArrayList<Descuento>) descuentoRepository.findAll();
     }
 
-    public Descuento getRepairListById(Long id) {
+    public Descuento getDescuentoById(Long id) {
         return descuentoRepository.findById(id).get();
     }
 

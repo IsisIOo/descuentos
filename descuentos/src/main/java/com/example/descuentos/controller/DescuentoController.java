@@ -17,26 +17,26 @@ public class DescuentoController {
 
 
     @GetMapping("/")
-    public ResponseEntity<List<RepairList>> listRepairList() {
-        List<RepairList> repairs = repairListService.getRepairsList();
+    public ResponseEntity<List<Descuento>> listRepairList() {
+        List<Descuento> repairs = descuentoService.getDescuento();
         return ResponseEntity.ok(repairs);
     }
 
     @GetMapping("/get-id/{id}")
-    public ResponseEntity<RepairList> getRepairListById(@PathVariable Long id) {
-        RepairList repair = repairListService.getRepairListById(id);
+    public ResponseEntity<Descuento> getRepairListById(@PathVariable Long id) {
+        Descuento repair = descuentoService.getDescuentoById(id);
         return ResponseEntity.ok(repair);
     }
 
-    @GetMapping("/by-repair/{repairName}")
-    public ResponseEntity<RepairList> getRepairListByName(@PathVariable String repairName) {
-        RepairList repair = repairListService.getRepairListByName(repairName);
+    @GetMapping("/by-marca/{marca}")
+    public ResponseEntity<Descuento> getRepairListByName(@PathVariable String marca) {
+        Descuento repair = descuentoService.getDescuentoByMarcaName(marca);
         return ResponseEntity.ok(repair);
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<RepairList> deleteRepairList(@PathVariable Long id) throws Exception {
-        var isDeleted = repairListService.deleteRepairList(id);
+    public ResponseEntity<Descuento> deleteRepairList(@PathVariable Long id) throws Exception {
+        var isDeleted = descuentoService.deleteDescuento(id);
         return ResponseEntity.noContent().build();
     }
 

@@ -6,7 +6,7 @@ spring:
       enabled: true
       uri: http://config-server-service:8081
   datasource:
-    url: jdbc:postgresql://db-list-repair-service:5433/db-descuento
+    url: jdbc:postgresql://db-descuento-service:5435/db-descuento
     username: postgres
     password: isilinda
     driver-class-name: org.postgresql.Driver
