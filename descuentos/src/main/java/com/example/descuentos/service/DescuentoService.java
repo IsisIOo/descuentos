@@ -23,9 +23,9 @@ public class DescuentoService {
         return descuentoRepository.findById(id).get();
     }
 
-    public Descuento getDescuentoByMarcaName(String name) {
-        return descuentoRepository.findByMarcaName(name);
-    }
+    //public Descuento getDescuentoByMarcaName(String name) {
+    //    return descuentoRepository.findByMarcaName(name);
+    //}
 
     public Descuento saveDescuento(Descuento des) {
         return descuentoRepository.save(des);

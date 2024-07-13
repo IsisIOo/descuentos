@@ -28,11 +28,11 @@ public class DescuentoController {
         return ResponseEntity.ok(repair);
     }
 
-    @GetMapping("/by-marca/{marca}")
+    /*@GetMapping("/by-marca/{marca}")
     public ResponseEntity<Descuento> getRepairListByName(@PathVariable String marca) {
         Descuento repair = descuentoService.getDescuentoByMarcaName(marca);
         return ResponseEntity.ok(repair);
-    }
+    }*/
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Descuento> deleteRepairList(@PathVariable Long id) throws Exception {
